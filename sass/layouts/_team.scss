@@ -1,15 +1,25 @@
 .team {
   background: var(--filter-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .staff__title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include desktop {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .staff__list {
@@ -23,8 +33,14 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: 270px;
+  max-width: 450px;
   height: auto;
+  @include tablet {
+    max-width: 354px;
+  }
+  @include desktop {
+    max-width: 270px;
+  }
 }
 
 .staff__info {
@@ -33,6 +49,7 @@
 }
 
 .staff__name {
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.18;
   text-align: center;

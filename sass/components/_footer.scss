@@ -6,13 +6,37 @@
 
 .footer .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  column-gap: 70px;
-  align-items: baseline;
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.company-info__join-us {
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+    padding-right: 30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    gap: 165px;
+    flex-direction: row;
+  }
+  @include desktop {
+    padding-right: 0;
+  }
 }
 
 .company-info {
-  width: 231px;
+  width: 232px;
+  margin-bottom: 60px;
+  @include desktop {
+    width: 231px;
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .address {
@@ -22,6 +46,11 @@
 .footer-logo {
   display: block;
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer-studio {
@@ -33,20 +62,25 @@
 }
 
 .company-info__text {
+  display: block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-bg-color);
-  display: block;
   margin-bottom: 9px;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .company-info__link {
+  display: block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-mail-tel);
-  display: block;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -54,14 +88,27 @@
   &:focus {
     color: var(--main-hover-focus-color);
   }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .join-us {
-  width: 206px;
-  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 60px;
+  @include tablet {
+    width: 206px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
 }
 
 .join-us__text {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -69,10 +116,16 @@
   text-transform: uppercase;
   color: var(--main-text-bg-color);
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .join-us__list {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -95,8 +148,14 @@
 }
 
 .subscribe {
-  position: relative;
-  width: 570px;
+  width: 100%;
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop {
+    position: relative;
+    width: 570px;
+  }
 }
 
 .subscribe__text {
@@ -109,10 +168,14 @@
   text-transform: uppercase;
   color: var(--main-text-bg-color);
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .subscribe-input-info {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   border: 1px solid var(--subscribe-input-info-border);
@@ -124,10 +187,16 @@
   letter-spacing: 0.03em;
   color: var(--subscribe-input-info-text);
   padding-left: 16px;
+  @include desktop {
+    width: 358px;
+  }
 }
 
 .subscribe__input {
-  width: 358px;
+  width: 100%;
+  @include desktop {
+    width: 358px;
+  }
 }
 
 .subscribe-input-info::placeholder {
@@ -139,9 +208,9 @@
 }
 
 .subscribe__btn {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,6 +232,11 @@
   &:hover,
   &:focus {
     background-color: var(--second-hover-focus-color);
+  }
+  @include desktop {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 

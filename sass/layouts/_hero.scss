@@ -1,32 +1,65 @@
 .hero {
   background: var(--hero-bg);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__overlay {
-  max-width: 1600px;
+  max-width: 480px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero-background.jpg);
+  background-image: var(--hero-gradient), url(..//../images/hero/hero-mob1x.jpg);
+  @include retina {
+    background-image: var(--hero-gradient),
+      url(..//../images/hero/hero-mob2x.jpg);
+  }
+  @include tablet {
+    background-image: var(--hero-gradient),
+      url(..//../images/hero/hero-tab1x.jpg);
+    max-width: 768px;
+    @include retina {
+      background-image: var(--hero-gradient),
+        url(..//../images/hero/hero-tab2x.jpg);
+    }
+  }
+  @include desktop {
+    background-image: var(--hero-gradient),
+      url(..//../images/hero/hero-desk1x.jpg);
+    max-width: 1600px;
+    @include retina {
+      background-image: var(--hero-gradient),
+        url(..//../images/hero/hero-desk2x.jpg);
+    }
+  }
 }
 
 .offer__title {
+  max-width: 360px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 20px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-text-bg-color);
-  max-width: 696px;
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+  @media screen and (min-width: 389px) {
+    font-size: 26px;
+  }
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .offer__btn {
@@ -41,7 +74,7 @@
   color: var(--main-text-bg-color);
   background-color: var(--main-hover-focus-color);
   border: transparent;
-  width: 216px;
+  width: 200px;
   height: 50px;
   border-radius: 4px;
   display: block;
@@ -54,6 +87,9 @@
   &:focus {
     background: var(--second-hover-focus-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @include desktop {
+    width: 216px;
   }
 }
 
