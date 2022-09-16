@@ -29,12 +29,12 @@
 }
 
 .staff__bg {
+  max-width: 450px;
+  height: auto;
   background: var(--main-text-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  max-width: 450px;
-  height: auto;
   @include tablet {
     max-width: 354px;
   }
@@ -78,9 +78,9 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background-color: var(--main-text-bg-color);
   color: var(--clients-border);
+  background-color: var(--main-text-bg-color);
+  border-radius: 50%;
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

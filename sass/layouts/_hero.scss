@@ -41,6 +41,7 @@
 }
 
 .offer__title {
+  display: block;
   max-width: 360px;
   font-weight: 900;
   font-size: 20px;
@@ -49,7 +50,6 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-text-bg-color);
-  display: block;
   margin: 0 auto;
   margin-bottom: 30px;
   @media screen and (min-width: 389px) {
@@ -63,23 +63,20 @@
 }
 
 .offer__btn {
+  display: block;
+  width: 200px;
+  height: 50px;
   font-weight: 700;
   font-style: inherit;
   font-family: inherit;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-text-bg-color);
   background-color: var(--main-hover-focus-color);
   border: transparent;
-  width: 200px;
-  height: 50px;
   border-radius: 4px;
-  display: block;
-  margin: 0 auto;
   box-shadow: transparent;
+  margin: 0 auto;
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,8 +88,4 @@
   @include desktop {
     width: 216px;
   }
-}
-
-.pointer {
-  cursor: pointer;
 }
