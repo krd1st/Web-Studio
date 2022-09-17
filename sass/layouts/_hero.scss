@@ -6,36 +6,36 @@
     padding-top: 200px;
     padding-bottom: 200px;
   }
-}
-
-.hero__overlay {
-  max-width: 480px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: var(--hero-gradient), url(..//../images/hero/hero-mob1x.jpg);
-  @include retina {
+  &__overlay {
+    max-width: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
     background-image: var(--hero-gradient),
-      url(..//../images/hero/hero-mob2x.jpg);
-  }
-  @include tablet {
-    background-image: var(--hero-gradient),
-      url(..//../images/hero/hero-tab1x.jpg);
-    max-width: 768px;
+      url(..//../images/hero/hero-mob1x.jpg);
     @include retina {
       background-image: var(--hero-gradient),
-        url(..//../images/hero/hero-tab2x.jpg);
+        url(..//../images/hero/hero-mob2x.jpg);
     }
-  }
-  @include desktop {
-    background-image: var(--hero-gradient),
-      url(..//../images/hero/hero-desk1x.jpg);
-    max-width: 1600px;
-    @include retina {
+    @include tablet {
       background-image: var(--hero-gradient),
-        url(..//../images/hero/hero-desk2x.jpg);
+        url(..//../images/hero/hero-tab1x.jpg);
+      max-width: 768px;
+      @include retina {
+        background-image: var(--hero-gradient),
+          url(..//../images/hero/hero-tab2x.jpg);
+      }
+    }
+    @include desktop {
+      background-image: var(--hero-gradient),
+        url(..//../images/hero/hero-desk1x.jpg);
+      max-width: 1600px;
+      @include retina {
+        background-image: var(--hero-gradient),
+          url(..//../images/hero/hero-desk2x.jpg);
+      }
     }
   }
 }

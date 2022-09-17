@@ -3,9 +3,11 @@
 @import "./components/common";
 @import "./utils/hidden";
 @import "./utils/mixins";
-@import "./layouts/container";
+@import "./components/container";
+@import "./utils/current";
 @import "./components/header";
 @import "./components/logo";
+@import "./components/menu";
 @import "./layouts/hero";
 @import "./components/modal.scss";
 @import "./layouts/features";

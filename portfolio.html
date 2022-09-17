@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div class="container">
         <a lang="en" href="" class="logo header-logo link"
@@ -29,7 +29,7 @@
         <nav class="navigation">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="/index.html" class="navigation__link link">Студія</a>
+              <a href="./index.html" class="navigation__link link">Студія</a>
             </li>
             <li class="navigation__item">
               <a href="" class="navigation__link link current">Портфоліо</a>
@@ -73,17 +73,72 @@
             aria-label="Переключатель мобильного меню"
           >
             <use
-              class="icon-burger"
+              class="menu-icon-burger"
               href="./images/icons.svg#icon-menu-burger"
             ></use>
             <use
-              class="icon-cross"
+              class="menu-icon-cross"
               href="./images/icons.svg#icon-menu-closer"
             ></use>
           </svg>
         </button>
       </div>
-      <div class="menu" id="menu" data-menu></div>
+      <div class="menu" id="menu" data-menu>
+        <div class="menu-container">
+          <nav class="menu-navigation">
+            <ul class="menu-navigation__list list">
+              <li class="menu-navigation__item">
+                <a href="./index.html" class="menu-navigation__link link"
+                  >Студія</a
+                >
+              </li>
+              <li class="menu-navigation__item">
+                <a href="" class="menu-navigation__link link menu-current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="menu-navigation__item">
+                <a href="" class="menu-navigation__link link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-wrap">
+            <div class="menu-contacts">
+              <ul class="menu-contacts__list list">
+                <li class="menu-contacts__item">
+                  <a href="tel:+380961111111" class="menu-contacts__tel link">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="menu-contacts__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="menu-contacts__mail link"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="menu-socials">
+              <ul class="menu-socials__list list">
+                <li class="menu-socials__item">
+                  <a href="" class="menu-socials__link link">Instagram</a>
+                </li>
+                <li class="menu-socials__item">
+                  <a href="" class="menu-socials__link link">Twitter</a>
+                </li>
+                <li class="menu-socials__item">
+                  <a href="" class="menu-socials__link link">Facebook</a>
+                </li>
+                <li class="menu-socials__item">
+                  <a href="" class="menu-socials__link link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="catalog">
@@ -607,7 +662,7 @@
                 ><span class="subscribe__text">Підпишіться на розсилку</span>
                 <input
                   type="text"
-                  class="subscribe-input-info"
+                  class="subscribe__input-info"
                   name="mail"
                   placeholder="E-mail"
                 />
