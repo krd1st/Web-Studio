@@ -241,10 +241,11 @@ body {
 
 .menu {
   display: none;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--main-text-bg-color);
 }
 .menu .menu-container {
   display: flex;
@@ -273,7 +274,7 @@ body {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   margin-left: auto;
   transition-property: color;
   transition-duration: 250ms;
@@ -318,7 +319,7 @@ body {
   color: var(--main-hover-focus-color);
 }
 .menu-current {
-  color: #2196f3;
+  color: var(--main-hover-focus-color);
 }
 .menu-wrap {
   margin-top: auto;
@@ -332,7 +333,7 @@ body {
   font-size: 26px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #2196f3;
+  color: var(--main-hover-focus-color);
   margin-bottom: 32px;
 }
 @media screen and (min-width: 382px) {
@@ -345,7 +346,7 @@ body {
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--second-title-color);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -373,7 +374,7 @@ body {
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196f3;
+  color: var(--main-hover-focus-color);
 }
 @media screen and (min-width: 415px) {
   .menu-socials__link {
@@ -681,7 +682,7 @@ body {
   }
 }
 .agreement span {
-  display: inline-block;
+  display: flex;
   content: "";
   align-items: center;
   justify-content: center;
@@ -693,6 +694,11 @@ body {
   transition-property: background-color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 479px) {
+  .agreement span {
+    display: inline-block;
+  }
 }
 .agreement__check-icon {
   fill: transparent;

@@ -1,9 +1,10 @@
 .menu {
   display: none;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--main-text-bg-color);
   & .menu-container {
     display: flex;
     flex-direction: column;
@@ -27,7 +28,7 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 1;
+    z-index: 2;
     margin-left: auto;
     transition-property: color;
     transition-duration: 250ms;
@@ -72,7 +73,7 @@
     }
   }
   &-current {
-    color: #2196f3;
+    color: var(--main-hover-focus-color);
   }
   &-wrap {
     margin-top: auto;
@@ -86,7 +87,7 @@
     font-size: 26px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: var(--main-hover-focus-color);
     margin-bottom: 32px;
     @media screen and (min-width: 382px) {
       font-size: 34px;
@@ -97,7 +98,7 @@
     font-size: 24px;
     line-height: 1.16;
     letter-spacing: 0.02em;
-    color: #757575;
+    color: var(--second-title-color);
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -126,7 +127,7 @@
     font-weight: 500;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: var(--main-hover-focus-color);
     @media screen and (min-width: 415px) {
       font-size: 18px;
     }
